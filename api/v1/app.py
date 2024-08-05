@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-script that Creates Flask app; and register the blueprint app_views to Flask instance app.
+Creates Flask app; and register the blueprint app_views to Flask instance app.
 '''
 
 from flask import Flask, jsonify
@@ -21,7 +21,7 @@ app.url_map.strict_slashes = False
 @app.teardown_appcontext
 def teardown_engine(exception):
     '''
-    script that Removes the current SQLAlchemy Session object after each request.
+removes the current SQLAlchemy Session object after each request.
     '''
     storage.close()
 
